@@ -1,0 +1,13 @@
+.img-container {
+    text-align: center;
+    padding: 5px;
+    border: 2px white solid;
+}
+
+.img-container:hover {
+    border: 2px solid greenyellow;
+}
+
+.active {
+    border: 2px solid greenyellow;
+}
