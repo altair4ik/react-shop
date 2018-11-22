@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import ContentItem from '../content-item';
 import SearchPanel from '../search-panel';
 import Cart from '../cart';
@@ -12,21 +13,33 @@ import '@brainhubeu/react-carousel/lib/style.css';
 interface IState {
     items: [{ id: number, title: string, pictures: string[], price: number }] | null,
     slides: [{id: number, path: string}] | null,
-    search: string
+    search: string,
 }
 
-export default class Content extends React.Component<{}, IState> {
+interface IProp {
+    dispatch: (obj: {type: string, item: any}) => {}
+}
+
+const mapStateToProps = (state: any) => {
+    return {
+        items: state.items
+    }
+};
+
+class Content extends React.Component<IProp, IState> {
 
     private dbService = new DbService();
 
-    constructor(prop: {}) {
+    constructor(prop: IProp) {
         super(prop);
         this.state = {search: '', items: null, slides: null}
     }
 
-    public componentWillMount(): void {
-        this.setState({search: ''})
-    }
+    public addToCart = (id: number) => {
+        this.dbService.getItem(id).then((item: { id: number, title: string, pictures: string[], price: number }) => {
+            this.props.dispatch({type: 'ADD', item});
+        });
+    };
 
     public componentDidMount() {
         this.dbService.getAllItems().then((items) => {
@@ -67,7 +80,7 @@ export default class Content extends React.Component<{}, IState> {
         const items = visibleItems.map((item) => {
             return (
                 <div key={item.id} className='col-sm-6 col-md-4 col-lg-4 col-xl-3'>
-                    <ContentItem children={item}/>
+                    <ContentItem addToCart={this.addToCart} children={item}/>
                 </div>
             );
         });
@@ -98,3 +111,5 @@ export default class Content extends React.Component<{}, IState> {
         );
     }
 }
+
+export default connect(mapStateToProps)(Content)

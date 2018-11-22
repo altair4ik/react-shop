@@ -5,6 +5,7 @@ import AddToCartButton from '../add-to-cart-button';
 import './content-item.css';
 
 interface IProps {
+    addToCart: (id: number) => void,
     children: { id: number, title: string, pictures: string[], price: number }
 }
 
@@ -17,7 +18,7 @@ export default class ContentItem extends React.Component<IProps, {}> {
                 <div className="card-body">
                     <Link to={id.toString()}><h5 className="card-title">{title}</h5></Link>
                     <p className="card-text">price: {Math.floor(price / 27)}$</p>
-                    <AddToCartButton children={id} />
+                    <AddToCartButton addToCart={this.props.addToCart} children={id} />
                 </div>
             </div>
         );

@@ -2,7 +2,7 @@ import * as React from 'react';
 import DbService from "../../services/db-service";
 import ItemTitle from "../item-title";
 import ItemCharacteristic from "../item-characteristic";
-import AddToCartButton from "../add-to-cart-button";
+// import AddToCartButton from "../add-to-cart-button";
 import ItemThumb from "../item-thumb";
 import ItemPicture from "../item-picture";
 import Cart from "../cart";
@@ -58,7 +58,7 @@ export default class Item extends React.Component<IProp, IState> {
         if (this.state === null) {
             return <div>Loading...</div>
         }
-        const {id, title, pictures, price, characteristics, description} = this.state.item;
+        const { title, pictures, price, characteristics, description} = this.state.item;
         const characteristicsList = characteristics.map((el) => {
             return <ItemCharacteristic key={el.title} children={el}/>
         });
@@ -94,7 +94,7 @@ export default class Item extends React.Component<IProp, IState> {
                                 <ItemDescription children={description}/>
                                 <span className='font-weight-bold'>Цена: {price}грн</span>
                             </div>
-                            <AddToCartButton children={id}/>
+
                         </div>
                     </div>
                 </div>
