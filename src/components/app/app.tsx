@@ -15,16 +15,35 @@ interface IState {
 
 export default class App extends React.Component<{}, IState> {
 
-    public cart(state: any[] = [], action: {type: string, item: any}) {
+    public store = createStore(this.cart);
+
+    public cart(
+        state: {id: {id: number, title: string, pictures: string[], price: number, amount: number}} | {} = {},
+        action: {
+            type: string,
+            item: {
+                id: number,
+                title: string,
+                pictures: string[],
+                price: number
+            }}) {
         switch ((action.type)) {
             case 'ADD':
-                state.push(action.item);
+                if (state[action.item.id]) {
+                    state[action.item.id].amount++
+                } else {
+                    state[action.item.id] = action.item;
+                    state[action.item.id].amount = 1;
+                }
                 return state;
                 break;
             case 'DEL':
-                state.push('del');
+                console.log('del');
                 return state;
                 break;
+            case 'GET':
+                console.log('get', state);
+                return state;
             default:
                 console.log('default');
                 return state;
@@ -32,10 +51,9 @@ export default class App extends React.Component<{}, IState> {
     }
 
     public render() {
-        const store = createStore(this.cart);
-        store.subscribe(() => console.log(store.getState()));
+        this.store.subscribe(() => console.log(this.store.getState()));
         return (
-            <Provider store={store}>
+            <Provider store={this.store}>
                 <div>
                     <Router>
                         <div>

@@ -2,10 +2,11 @@ import * as React from 'react';
 import DbService from "../../services/db-service";
 import ItemTitle from "../item-title";
 import ItemCharacteristic from "../item-characteristic";
-// import AddToCartButton from "../add-to-cart-button";
+import AddToCartButton from "../add-to-cart-button";
 import ItemThumb from "../item-thumb";
 import ItemPicture from "../item-picture";
 import Cart from "../cart";
+import { connect } from 'react-redux';
 
 import './item.css';
 import ItemDescription from "../item-description/item-description";
@@ -25,7 +26,8 @@ interface IState {
             ]
     },
     itemPicture: string,
-    indicator: number
+    indicator: number,
+    cart: any
 }
 
 interface IProp {
@@ -33,10 +35,18 @@ interface IProp {
         params: {
             id: string
         }
-    }
+    },
+    dispatch: (obj: {type: string, item: any}) => {},
+    cart: any
 }
 
-export default class Item extends React.Component<IProp, IState> {
+const mapStateToProps = (state: any) => {
+    return {
+        item: state.item
+    }
+};
+
+class Item extends React.Component<IProp, IState> {
     private dbService = new DbService();
 
     public componentDidMount() {
@@ -48,6 +58,13 @@ export default class Item extends React.Component<IProp, IState> {
             console.log(item);
         });
     }
+
+    public addToCart = (id: number) => {
+        this.dbService.getItem(id).then((item: { id: number, title: string, pictures: string[], price: number }) => {
+            this.props.dispatch({type: 'ADD', item});
+            this.setState({cart: this.props.dispatch({type: 'GET', item})})
+        });
+    };
 
     public changePictrure = (path: string, idx: number): void => {
         this.setState({itemPicture: path});
@@ -94,7 +111,7 @@ export default class Item extends React.Component<IProp, IState> {
                                 <ItemDescription children={description}/>
                                 <span className='font-weight-bold'>Цена: {price}грн</span>
                             </div>
-
+                            <AddToCartButton addToCart={this.addToCart} children={this.state.item.id} />
                         </div>
                     </div>
                 </div>
@@ -107,3 +124,5 @@ export default class Item extends React.Component<IProp, IState> {
         );
     }
 }
+
+export default connect(mapStateToProps)(Item)

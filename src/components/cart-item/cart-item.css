@@ -1,0 +1,16 @@
+.thumb img {
+    width: 30px;
+    height: 45px;
+    object-fit: contain;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+.item-pic {
+    float: left;
+    margin-right: 10px;
+}
+
+.item {
+    margin-bottom: 8px;
+    text-align: left;
+}

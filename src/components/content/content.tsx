@@ -14,15 +14,17 @@ interface IState {
     items: [{ id: number, title: string, pictures: string[], price: number }] | null,
     slides: [{id: number, path: string}] | null,
     search: string,
+    cart: any,
 }
 
 interface IProp {
-    dispatch: (obj: {type: string, item: any}) => {}
+    dispatch: (obj: {type: string, item: any}) => {},
+    cart: any
 }
 
 const mapStateToProps = (state: any) => {
     return {
-        items: state.items
+        cart: state
     }
 };
 
@@ -32,16 +34,18 @@ class Content extends React.Component<IProp, IState> {
 
     constructor(prop: IProp) {
         super(prop);
-        this.state = {search: '', items: null, slides: null}
+        this.state = {search: '', items: null, slides: null, cart: null};
     }
 
     public addToCart = (id: number) => {
         this.dbService.getItem(id).then((item: { id: number, title: string, pictures: string[], price: number }) => {
             this.props.dispatch({type: 'ADD', item});
+            this.setState({cart: this.props.dispatch({type: 'GET', item})})
         });
     };
 
     public componentDidMount() {
+        console.log('****', this.props.cart);
         this.dbService.getAllItems().then((items) => {
             this.setState({items});
         });
