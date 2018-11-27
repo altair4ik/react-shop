@@ -11,14 +11,14 @@ import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 
 interface IState {
-    items: [{ id: number, title: string, pictures: string[], price: number }] | null,
-    slides: [{id: number, path: string}] | null,
-    search: string,
-    cart: any,
+    items: [{ id: number, title: string, pictures: string[], price: number }] | null;
+    slides: [{id: number, path: string}] | null;
+    search: string;
+    cart: any;
 }
 
 interface IProp {
-    dispatch: (obj: {type: string, item: any}) => {},
+    dispatch: (obj: {type: string, item?: any, id?: number}) => {};
     cart: any
 }
 
@@ -42,6 +42,14 @@ class Content extends React.Component<IProp, IState> {
             this.props.dispatch({type: 'ADD', item});
             this.setState({cart: this.props.dispatch({type: 'GET', item})})
         });
+    };
+
+    public delItem = (itemId: number) => {
+        this.setState({cart: this.props.dispatch({type: 'DEL', id: itemId})})
+    };
+
+    public clearCart = () => {
+        this.setState({cart: this.props.dispatch({type: 'CLEAR'})})
     };
 
     public componentDidMount() {
@@ -109,7 +117,7 @@ class Content extends React.Component<IProp, IState> {
                     </div>
                 </div>
                 <div className="col-xl-2">
-                    <Cart />
+                    <Cart clearCart={this.clearCart} delItem={this.delItem} state={this.state}/>
                 </div>
             </div>
         );

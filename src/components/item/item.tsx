@@ -8,6 +8,7 @@ import ItemPicture from "../item-picture";
 import Cart from "../cart";
 import { connect } from 'react-redux';
 
+
 import './item.css';
 import ItemDescription from "../item-description/item-description";
 
@@ -36,7 +37,7 @@ interface IProp {
             id: string
         }
     },
-    dispatch: (obj: {type: string, item: any}) => {},
+    dispatch: (obj: {type: string, item?: any, id?: number}) => {},
     cart: any
 }
 
@@ -55,7 +56,15 @@ class Item extends React.Component<IProp, IState> {
             this.setState({item});
             this.setState({itemPicture: item.pictures[0]});
             this.setState({indicator: 0});
-            console.log(item);
+        });
+    }
+
+    public componentWillReceiveProps(nextProps: any) {
+        const id = +nextProps.match.params.id;
+        this.dbService.getItem(id).then((item) => {
+            this.setState({item});
+            this.setState({itemPicture: item.pictures[0]});
+            this.setState({indicator: 0});
         });
     }
 
@@ -64,6 +73,14 @@ class Item extends React.Component<IProp, IState> {
             this.props.dispatch({type: 'ADD', item});
             this.setState({cart: this.props.dispatch({type: 'GET', item})})
         });
+    };
+
+    public delItem = (itemId: number) => {
+            this.setState({cart: this.props.dispatch({type: 'DEL', id: itemId})})
+    };
+
+    public clearCart = () => {
+        this.setState({cart: this.props.dispatch({type: 'CLEAR'})})
     };
 
     public changePictrure = (path: string, idx: number): void => {
@@ -116,7 +133,7 @@ class Item extends React.Component<IProp, IState> {
                     </div>
                 </div>
                 <div className="col-xl-2">
-                    <Cart />
+                    <Cart clearCart={this.clearCart} delItem={this.delItem} state={this.state}/>
                 </div>
 
                 <hr/>

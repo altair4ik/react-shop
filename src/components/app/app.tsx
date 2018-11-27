@@ -17,35 +17,60 @@ export default class App extends React.Component<{}, IState> {
 
     public store = createStore(this.cart);
 
+    public componentWillMount(): void {
+        this.store.dispatch({type: 'UPLOAD_CART'});
+    }
+
     public cart(
-        state: {id: {id: number, title: string, pictures: string[], price: number, amount: number}} | {} = {},
+        state: { id: { id: number, title: string, pictures: string[], price: number, amount: number } } | {} = {},
         action: {
             type: string,
-            item: {
+            item?: {
                 id: number,
                 title: string,
                 pictures: string[],
                 price: number
-            }}) {
+            },
+            id?: number
+        }) {
         switch ((action.type)) {
             case 'ADD':
-                if (state[action.item.id]) {
-                    state[action.item.id].amount++
-                } else {
-                    state[action.item.id] = action.item;
-                    state[action.item.id].amount = 1;
+                if (action.item) {
+                    if (state[action.item.id]) {
+                        state[action.item.id].amount++
+                    } else {
+                        state[action.item.id] = action.item;
+                        state[action.item.id].amount = 1;
+                    }
                 }
+                localStorage.setItem('cart', JSON.stringify(state));
+                console.log(action.type);
                 return state;
                 break;
             case 'DEL':
-                console.log('del');
+                if (action.id) {
+                    delete state[action.id];
+                }
+                localStorage.setItem('cart', JSON.stringify(state));
+                console.log(action.type);
                 return state;
                 break;
             case 'GET':
-                console.log('get', state);
+                return state;
+                break;
+            case 'CLEAR':
+                state = {};
+                localStorage.setItem('cart', JSON.stringify(state));
+                console.log(action.type);
+                return state;
+            case 'UPLOAD_CART':
+                const storage = localStorage.getItem('cart');
+                if (storage) {
+                    state = JSON.parse(storage);
+                }
+                console.log(action.type);
                 return state;
             default:
-                console.log('default');
                 return state;
         }
     }
@@ -57,7 +82,7 @@ export default class App extends React.Component<{}, IState> {
                 <div>
                     <Router>
                         <div>
-                            <Header />
+                            <Header/>
 
                             <div className='container-fluid'>
                                 <Route path='/' component={Content} exact={true}/>

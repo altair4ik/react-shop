@@ -1,4 +1,5 @@
 import * as React from 'react';
+import DelItemButton from '../del-item-button';
 
 import './cart-item.css'
 import {Link} from "react-router-dom";
@@ -17,7 +18,8 @@ interface IProp {
             }
             ],
         amount: number
-    }
+    };
+    delItem: (id: number) => void;
 }
 
 export default class CartItem extends React.Component<IProp, {}>{
@@ -30,9 +32,8 @@ export default class CartItem extends React.Component<IProp, {}>{
         return(
             <div className='item'>
                 <div className='item-pic'><span className='thumb'><img src={pictures[0]} /></span></div>
-                <span><Link to={id.toString()}>{t}</Link> {amount}шт.</span>
+                <span><Link to={id.toString()}>{t}</Link> {amount}шт. <DelItemButton delItem={this.props.delItem} id={id}/></span>
             </div>
         );
-        return(<span>1</span>)
     }
 }

@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c181cfd6-3ea8-4a52-bfbd-c812ba8e8c96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/cart-item/cart-item.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cart-item/cart-item.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cart-item/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/clear-cart-button/clear-cart-button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/clear-cart-button/clear-cart-button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/clear-cart-button/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/del-item-button/del-item-button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/del-item-button/del-item-button.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/del-item-button/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/cart-item/cart-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart-item/cart-item.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/cart/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cart/cart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/content/content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/content/content.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/item/item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/item/item.tsx" afterDir="false" />
@@ -22,26 +30,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/content/content.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+            <state relative-caret-position="342">
+              <caret line="135" column="72" selection-start-line="135" selection-start-column="72" selection-end-line="135" selection-end-column="72" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/item/item.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <element signature="n#!!block;n#item#0;n#!!block;n#IState#0" />
               </folding>
             </state>
           </provider>
@@ -59,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/content-item/content-item.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="266">
               <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="91" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -71,8 +66,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/app/app.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+            <state relative-caret-position="380">
+              <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/clear-cart-button/clear-cart-button.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -83,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/cart/cart.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+            <state relative-caret-position="399">
+              <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -95,10 +102,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/cart-item/cart-item.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="32" column="76" selection-start-line="32" selection-start-column="76" selection-end-line="32" selection-end-column="76" />
+            <state relative-caret-position="399">
+              <caret line="34" column="112" selection-start-line="34" selection-start-column="112" selection-end-line="34" selection-end-column="112" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/item/item.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-551">
+              <caret line="83" column="6" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <element signature="n#!!block;n#item#0;n#!!block;n#IState#0" />
               </folding>
             </state>
           </provider>
@@ -117,6 +137,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>dispa</find>
+      <find>cart</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -125,18 +146,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/item-title/item-title.tsx" />
-        <option value="$PROJECT_DIR$/src/components/item-characteristics/item-characteristics.tsx" />
-        <option value="$PROJECT_DIR$/src/components/item-description/item-description.css" />
-        <option value="$PROJECT_DIR$/src/components/item-description/index.tsx" />
-        <option value="$PROJECT_DIR$/src/components/item-description/item-description.tsx" />
-        <option value="$PROJECT_DIR$/src/components/add-to-cart-button/add-to-cart-button.css" />
         <option value="$PROJECT_DIR$/src/components/add-to-cart-button/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/item-characteristic/item-characteristics.tsx" />
         <option value="$PROJECT_DIR$/src/components/item-thumb/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/item-picture/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/slider/index.tsx" />
-        <option value="$PROJECT_DIR$/db.json" />
         <option value="$PROJECT_DIR$/src/components/slider-item/slider-item.css" />
         <option value="$PROJECT_DIR$/src/components/slider-item/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/slider/slider.css" />
@@ -144,7 +158,6 @@
         <option value="$PROJECT_DIR$/src/components/slider-item-indicator/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/slider-item/slider-item.tsx" />
         <option value="$PROJECT_DIR$/src/components/slider-item-indicator/slider-item-indicator.tsx" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/slider/slider.tsx" />
         <option value="$PROJECT_DIR$/images.d.ts" />
         <option value="$PROJECT_DIR$/src/services/db-service.ts" />
@@ -171,11 +184,19 @@
         <option value="$PROJECT_DIR$/src/components/cart-item/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/cart/cart.css" />
         <option value="$PROJECT_DIR$/src/components/cart-item/cart-item.css" />
+        <option value="$PROJECT_DIR$/db.json" />
+        <option value="$PROJECT_DIR$/src/components/del-item-button/del-item-button.css" />
+        <option value="$PROJECT_DIR$/src/components/del-item-button/index.tsx" />
         <option value="$PROJECT_DIR$/src/components/cart-item/cart-item.tsx" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/components/del-item-button/del-item-button.tsx" />
+        <option value="$PROJECT_DIR$/src/components/clear-cart-button/clear-cart-button.css" />
+        <option value="$PROJECT_DIR$/src/components/clear-cart-button/index.tsx" />
+        <option value="$PROJECT_DIR$/src/components/cart/cart.tsx" />
+        <option value="$PROJECT_DIR$/src/components/clear-cart-button/clear-cart-button.tsx" />
+        <option value="$PROJECT_DIR$/src/components/item/item.tsx" />
         <option value="$PROJECT_DIR$/src/components/app/app.tsx" />
         <option value="$PROJECT_DIR$/src/components/content/content.tsx" />
-        <option value="$PROJECT_DIR$/src/components/cart/cart.tsx" />
-        <option value="$PROJECT_DIR$/src/components/item/item.tsx" />
       </list>
     </option>
   </component>
@@ -191,7 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,6 +222,11 @@
             <path>
               <item name="shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -215,45 +240,24 @@
               <item name="shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="cart" type="462c0819:PsiDirectoryNode" />
+              <item name="del-item-button" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="shop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="cart-item" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="content-item" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="item" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="item-thumb" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-paginate" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -291,15 +295,16 @@
       <workItem from="1542788406322" duration="25796000" />
       <workItem from="1542873632541" duration="2638000" />
       <workItem from="1542878283531" duration="17747000" />
-      <workItem from="1543218936450" duration="20218000" />
+      <workItem from="1543218936450" duration="20968000" />
+      <workItem from="1543305731294" duration="16052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109673000" />
+    <option name="totallyTimeSpent" value="126475000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1430" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="1431" y="-4" width="1855" height="1084" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -345,30 +350,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/item-thumb/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item-picture/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/slider/index.tsx" />
-    <entry file="file://$PROJECT_DIR$/src/components/app/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/slider-item/slider-item.css" />
-    <entry file="file://$PROJECT_DIR$/src/components/slider-item/index.tsx" />
     <entry file="file://$PROJECT_DIR$/src/components/slider/slider.css" />
     <entry file="file://$PROJECT_DIR$/src/components/slider-item-indicator/slider-item-indicator.css" />
     <entry file="file://$PROJECT_DIR$/src/components/slider-item/slider-item.tsx" />
@@ -376,24 +357,10 @@
     <entry file="file://$PROJECT_DIR$/src/components/slider-item-indicator/slider-item-indicator.tsx" />
     <entry file="file://$PROJECT_DIR$/src/components/slider/slider.tsx" />
     <entry file="file://$PROJECT_DIR$/node_modules/react-bootstrap-carousel/dist/react-bootstrap-carousel.js" />
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="122" selection-start-line="14" selection-start-column="122" selection-end-line="14" selection-end-column="122" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/db-service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="39" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -443,49 +410,6 @@
           <caret selection-end-line="20" selection-end-column="1" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#40365#1" />
-            <element signature="e#19#1592#0" />
-            <element signature="e#1598#2661#0" />
-            <element signature="e#2240#2655#0" />
-            <element signature="e#2667#3980#0" />
-            <element signature="e#3986#5559#0" />
-            <element signature="e#5565#6628#0" />
-            <element signature="e#6207#6622#0" />
-            <element signature="e#6634#7947#0" />
-            <element signature="e#7953#9526#0" />
-            <element signature="e#9532#10595#0" />
-            <element signature="e#10174#10589#0" />
-            <element signature="e#10601#11914#0" />
-            <element signature="e#11920#13494#0" />
-            <element signature="e#13500#14564#0" />
-            <element signature="e#14570#15884#0" />
-            <element signature="e#15890#17464#0" />
-            <element signature="e#17470#18534#0" />
-            <element signature="e#18540#19854#0" />
-            <element signature="e#19860#21434#0" />
-            <element signature="e#21440#22504#0" />
-            <element signature="e#22510#23824#0" />
-            <element signature="e#23830#25404#0" />
-            <element signature="e#25410#26474#0" />
-            <element signature="e#26480#27794#0" />
-            <element signature="e#27800#29374#0" />
-            <element signature="e#29380#30444#0" />
-            <element signature="e#30450#31764#0" />
-            <element signature="e#31770#33344#0" />
-            <element signature="e#33350#34414#0" />
-            <element signature="e#34420#35734#0" />
-            <element signature="e#35740#37314#0" />
-            <element signature="e#37320#38384#0" />
-            <element signature="e#38390#39704#0" />
-            <element signature="e#39722#40363#0" />
           </folding>
         </state>
       </provider>
@@ -576,20 +500,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/store.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/index.tsx" />
+    <entry file="file://$PROJECT_DIR$/src/store/store.tsx" />
     <entry file="file://$PROJECT_DIR$/node_modules/redux/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
@@ -635,12 +547,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cart-item/cart-item.tsx">
+    <entry file="file://$PROJECT_DIR$/src/components/content-item/content-item.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="76" selection-start-line="32" selection-start-column="76" selection-end-line="32" selection-end-column="76" />
+        <state relative-caret-position="266">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="91" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="505" column="4" selection-start-line="505" selection-start-column="4" selection-end-line="505" selection-end-column="4" />
+          <folding>
+            <element signature="e#19#1592#0" />
+            <element signature="e#1598#2661#0" />
+            <element signature="e#2240#2655#0" />
+            <element signature="e#2667#3980#0" />
+            <element signature="e#3896#5469#0" />
+            <element signature="e#5475#6538#0" />
+            <element signature="e#6117#6532#0" />
+            <element signature="e#6544#7767#0" />
+            <element signature="e#7773#9346#0" />
+            <element signature="e#9352#10415#0" />
+            <element signature="e#9994#10409#0" />
+            <element signature="e#10421#11644#0" />
+            <element signature="e#11650#13224#0" />
+            <element signature="e#13230#14294#0" />
+            <element signature="e#13871#14286#0" />
+            <element signature="e#14300#15524#0" />
+            <element signature="e#15530#17104#0" />
+            <element signature="e#17110#18174#0" />
+            <element signature="e#17748#18163#0" />
+            <element signature="e#18180#19404#0" />
+            <element signature="e#39722#40363#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/db-service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="39" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/del-item-button/del-item-button.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/del-item-button/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cart-item/cart-item.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="34" column="112" selection-start-line="34" selection-start-column="112" selection-end-line="34" selection-end-column="112" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="111" selection-start-line="6" selection-start-column="111" selection-end-line="6" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/clear-cart-button/clear-cart-button.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/del-item-button/del-item-button.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/clear-cart-button/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/cart/cart.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="60" column="39" selection-start-line="60" selection-start-column="39" selection-end-line="60" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/clear-cart-button/clear-cart-button.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/item/item.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-551">
+          <caret line="83" column="6" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+            <element signature="n#!!block;n#item#0;n#!!block;n#IState#0" />
           </folding>
         </state>
       </provider>
@@ -652,30 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/cart/cart.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app/app.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" column="48" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/content-item/content-item.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="91" />
+        <state relative-caret-position="380">
+          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -684,21 +691,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/content/content.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        <state relative-caret-position="342">
+          <caret line="135" column="72" selection-start-line="135" selection-start-column="72" selection-end-line="135" selection-end-column="72" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/item/item.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="39" column="13" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-            <element signature="n#!!block;n#item#0;n#!!block;n#IState#0" />
           </folding>
         </state>
       </provider>
